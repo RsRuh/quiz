@@ -1,0 +1,14 @@
+.imageOfLink{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.animetionlogo{
+    height: 70px;
+    width: 70px;
+}
+.navBar{
+    box-shadow: 1px 1px 5px gray;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}

@@ -1,23 +1,57 @@
 import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Statistics from './components/Statistics/Statistics';
+import Blog from './components/Blog/Blog';
+import Main from './layout/main'
+import Error from './components/Error/Error';
+import { useState } from 'react';
+import Quiz from './components/Quiz/Quiz';
 
 function App() {
+
+  const [qus, setQus] = useState([]);
+  
+  const handleClick = (id)=>{
+     setQus(id)
+  }
+
+  const router = createBrowserRouter([
+    {
+      path: '/', children:[
+        {
+          path: '/',loader: async()=>{
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },element: <Home handleClick={handleClick}></Home>
+        },
+        {
+          path: '/statistics',
+          loader:()=>fetch('https://openapi.programming-hero.com/api/quiz')
+          ,
+          element: <Statistics></Statistics>
+        },
+        {
+          path: '/blog', element: <Blog></Blog>
+        },
+        {
+          path: `/quiz/${qus}`,
+          loader:async()=>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${qus}`) 
+          }
+          , element: <Quiz></Quiz>
+        }
+      ], element: <Main></Main>
+    },
+    {
+      path: '*', element: <Error></Error>
+    }
+    
+  ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={router}></RouterProvider>
+     
     </div>
   );
 }
