@@ -38,7 +38,7 @@ const LoadQuiz = ({ each }) => {
 
     const notify = () =>{
         Swal.fire({
-            text: 'Is Your Currect Answer ',
+            text: 'Is Your Currect Ans Is ',
             title: `${correctAnswer}`,
             imageUrl: 'https://img.freepik.com/free-vector/feeling-proud-concept-illustration_114360-5118.jpg?w=826&t=st=1665499619~exp=1665500219~hmac=d319263ff90b6f4fda2cbdd3e030dbd67043091194d93cd885cad673b5ec16a3',
             imageWidth: 200,
