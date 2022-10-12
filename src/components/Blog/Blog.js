@@ -5,7 +5,7 @@ import './Blog.css'
 
 const Blog = () => {
     return (
-        <section className="bg-gray-800 text-gray-100 h-screen">
+        <section className="bg-gray-800 text-gray-100 ">
             <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
                 <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">Blog Section</p>
                 <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>

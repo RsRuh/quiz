@@ -2,7 +2,7 @@
 import { useLoaderData } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 
-import Footer from '../Footer/Footer';
+
 
 import Topics from '../Topics/Topics';
 
@@ -25,7 +25,7 @@ const Home = ({handleClick}) => {
             </div>
             
             
-            <Footer></Footer>
+           
             
        
         </div>
