@@ -6,7 +6,6 @@ import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Main from './layout/main'
 import Error from './components/Error/Error';
-import { useState } from 'react';
 import Quiz from './components/Quiz/Quiz';
 
 function App() {
