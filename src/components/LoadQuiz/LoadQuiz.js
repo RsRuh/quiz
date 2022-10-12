@@ -2,7 +2,7 @@
 import Options from '../Options/Options';
 import './LoadQuiz.css'
 import { EyeIcon } from '@heroicons/react/24/solid'
-import { ToastContainer } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 
@@ -52,7 +52,7 @@ const LoadQuiz = ({ each }) => {
         <div className='eachQuestion mb-10 m-auto md:w-[70%]'>
 
             <EyeIcon onClick={notify} className="h-6 flex justify-end w-6 text-black mr-3 mt-3 float-right cursor-pointer" />
-            <ToastContainer></ToastContainer>
+            
 
             <h1 className='text-center py-5 text-xl font-semibold'>{question}</h1>
            

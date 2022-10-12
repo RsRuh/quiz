@@ -32,3 +32,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+// className={({isActive})=> isActive ? 'active' : undefined}

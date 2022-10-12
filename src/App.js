@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home/Home';
@@ -11,11 +11,6 @@ import Quiz from './components/Quiz/Quiz';
 
 function App() {
 
-  const [qus, setQus] = useState([]);
-  
-  const handleClick = (id)=>{
-     setQus(id)
-  }
 
   const router = createBrowserRouter([
     {
@@ -23,7 +18,7 @@ function App() {
         {
           path: '/',loader: async()=>{
             return fetch('https://openapi.programming-hero.com/api/quiz')
-          },element: <Home handleClick={handleClick}></Home>
+          },element: <Home></Home>
         },
         {
           path: '/statistics',

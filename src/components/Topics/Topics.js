@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './Topics.css'
-const Topics = ({ topic,handleClick }) => {
+const Topics = ({ topic }) => {
 
 
 

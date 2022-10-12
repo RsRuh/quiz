@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, } from 'recharts';
 import './Statistics.css'
 
 const Statistics = () => {
@@ -8,14 +8,20 @@ const Statistics = () => {
     const data = dataLoad.data;
     return (
         <div>
-            <LineChart width={800} height={600} data={data}>
-                <Line type="monotone" dataKey="total" stroke="#8884d8" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip></Tooltip>
-            </LineChart>
+
+            <div className='flex justify-center'>
+                <LineChart width={400} height={600} data={data}>
+                    <Line type="monotone" dataKey="total" stroke="#8884d8" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip></Tooltip>
+                </LineChart>
             </div>
+            
+        </div>
     );
 };
 
 export default Statistics;
+
+
