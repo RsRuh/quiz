@@ -18,7 +18,7 @@ const Topics = ({ topic,handleClick }) => {
                     </div>
                     
                     <Link to={`/quiz/${id}`}>
-                    <button onClick={()=>handleClick(id)} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">Start MCQ</button>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">Start MCQ</button>
                     </Link>
                 </div>
             </div>

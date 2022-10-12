@@ -35,9 +35,9 @@ function App() {
           path: '/blog', element: <Blog></Blog>
         },
         {
-          path: `/quiz/${qus}`,
-          loader:async()=>{
-            return fetch(`https://openapi.programming-hero.com/api/quiz/${qus}`) 
+          path: '/quiz/:id',
+          loader:async({params})=>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`) 
           }
           , element: <Quiz></Quiz>
         }

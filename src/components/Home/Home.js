@@ -16,11 +16,14 @@ const Home = ({handleClick}) => {
         <div>
             
             <Banner></Banner>
-            <div className='flex justify-evenly my-10 gap-10 flex-col md:flex-row'>
+
+            
+            <div className='flex items-center justify-evenly my-10 gap-10 flex-col md:flex-row'>
             {
                 topics.map(topic=><Topics handleClick={handleClick} key={topic.id} topic={topic}></Topics>)
             }
             </div>
+            
             
             <Footer></Footer>
             
