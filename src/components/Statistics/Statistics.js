@@ -10,7 +10,7 @@ const Statistics = () => {
         <div>
 
             <div className='flex justify-center'>
-                <LineChart width={400} height={600} data={data}>
+                <LineChart width={380} height={600} data={data}>
                     <Line type="monotone" dataKey="total" stroke="#8884d8" />
                     <XAxis dataKey="name" />
                     <YAxis />

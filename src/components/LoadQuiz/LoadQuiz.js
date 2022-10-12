@@ -47,7 +47,7 @@ const LoadQuiz = ({ each }) => {
           })
     }
 
-
+    
     return (
         <div className='eachQuestion mb-10 m-auto md:w-[70%]'>
 
